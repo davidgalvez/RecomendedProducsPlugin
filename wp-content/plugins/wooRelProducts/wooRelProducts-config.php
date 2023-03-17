@@ -1,0 +1,53 @@
+<?php
+define("WOORELPRODS_PLUGIN",plugin_dir_path( __FILE__).basename(__FILE__,'-config.php').".php");
+define("WOORELPRODS_POSTTYPE_NAME",strtolower(basename(WOORELPRODS_PLUGIN,".php")));
+define("WOORELPRODS_POSTTYPE_ARGS", array(
+    'label'                 => __( 'Related Prod Section', 'wooRelProds' ),
+    'description'           => __( 'Create Related Products Section', 'wooRelProds' ),
+    'labels'                => array(
+        'name'                  => _x( 'Related Prod Sections', 'Post Type General Name', 'wooRelProds' ),
+        'singular_name'         => _x( 'Related Prod Section', 'Post Type Singular Name', 'wooRelProds' ),
+        'menu_name'             => __( 'Related Prods', 'wooRelProds' ),
+        'name_admin_bar'        => __( 'Related Prods', 'wooRelProds' ),            
+        'parent_item_colon'     => __( 'Parent Item:', 'wooRelProds' ),
+        'all_items'             => __( 'All Items', 'wooRelProds' ),
+        'add_new_item'          => __( 'Add New Item', 'wooRelProds' ),
+        'add_new'               => __( 'Add New', 'wooRelProds' ),
+        'new_item'              => __( 'New Item', 'wooRelProds' ),
+        'edit_item'             => __( 'Edit Item', 'wooRelProds' ),
+        'update_item'           => __( 'Update Item', 'wooRelProds' ),
+        'view_item'             => __( 'View Item', 'wooRelProds' ),
+        'view_items'            => __( 'View Items', 'wooRelProds' ),
+        'search_items'          => __( 'Search Item', 'wooRelProds' ),
+        'not_found'             => __( 'Not found', 'wooRelProds' ),
+        'not_found_in_trash'    => __( 'Not found in Trash', 'wooRelProds' ),            
+        'items_list'            => __( 'Items list', 'wooRelProds' ),
+        'items_list_navigation' => __( 'Items list navigation', 'wooRelProds' ),
+        'filter_items_list'     => __( 'Filter items list', 'wooRelProds' ),
+    ),
+    'supports'              => array( 'title' ),
+    'hierarchical'          => false,
+    'public'                => true,
+    'show_ui'               => true,
+    'show_in_menu'          => true,
+    'show_in_rest'          => true,
+    'menu_position'         => 5,
+    'menu_icon'             => 'dashicons-products',
+    'show_in_admin_bar'     => true,
+    'show_in_nav_menus'     => true,
+    'can_export'            => true,
+    'has_archive'           => true,
+    'exclude_from_search'   => false,
+    'publicly_queryable'    => true,
+    'capability_type'       => 'post',
+    'rest_base'             => 'rel-products-list',
+));
+DEFINE('WOORELPRODS_METABOX_ARGS',array(
+    "id"=>"wooreolprods_meta_box",
+    "title"=>"Related Products",
+    "nonce"=>"woorelprods_nonce",
+    "screen"=>WOORELPRODS_POSTTYPE_NAME,
+    "context"=>'normal',
+    "template_path"=>plugin_dir_path(__FILE__)."templates/metaboxes/woorelprods-metabox-tpl.php",
+    "priority"=>'high'
+));

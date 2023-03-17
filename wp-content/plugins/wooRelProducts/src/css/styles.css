@@ -1,0 +1,76 @@
+.container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.container .items {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    animation: carouselAnim 10s infinite alternate linear;
+}
+.container .items .link{   
+    color: white;
+    text-decoration: none;  
+    background-color: darkslategrey;   
+    padding: 0.1rem;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+}
+.container .items .entry {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 250px;
+    background: white;
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.05);
+}
+.container .items .entry p {
+    text-align: center;
+    padding: 1em;
+}
+.container .items .entry p.name {
+    font-weight: bold;
+}
+@keyframes carouselAnim {
+    from {
+        transform: translate(0, 0);
+   }
+    to {
+        transform: translate(calc(-25%) );
+   }
+}
+@media only screen and (max-width: 768px) {
+    .container .items {
+        animation: carouselAnim 30s infinite alternate linear;
+   }
+    @keyframes carouselAnim {
+        from {
+            transform: translate(0, 0);
+       }
+        to {
+            transform: translate(calc(-75%));
+       }
+   }
+}
+.container .faders {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+.container .faders .left, .container .faders .right {
+    background: linear-gradient(to right, rgba(245, 245, 245, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    z-index: 200;
+}
+.container .faders .right {
+    right: 0;
+    background: linear-gradient(to left, rgba(245, 245, 245, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}

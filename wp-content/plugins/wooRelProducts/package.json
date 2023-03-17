@@ -1,0 +1,19 @@
+{
+  "name": "woorelproducts",
+  "version": "1.0.0",
+  "description": "Add gutenberg blocks to plugin",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "author": "David Galvez Valverde",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^24.2.0",
+    "toml": "^3.0.0"
+  }
+}

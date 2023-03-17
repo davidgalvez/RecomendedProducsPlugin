@@ -1,0 +1,20 @@
+{
+    "name": "buyxpress/x-codec-mad",
+    "description": "Woocommerce Related Products Plugin",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "David Galvez",
+            "email": "davidgalvezfis@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev":{
+        "yoast/phpunit-polyfills" : "1.0.3",
+        "phpunit/phpunit": "9.5.5"
+    },
+    "autoload": {
+        "psr-4": {"wooRelProducts\\":"./inc"}
+    }
+}
