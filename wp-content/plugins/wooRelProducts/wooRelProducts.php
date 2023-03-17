@@ -4,7 +4,7 @@
  */
 /*
 Plugin Name: Related Products Woocommerce
-Plugin URI: https://github.com/netzstrategen/test-wp-related-products-david
+Plugin URI: https://github.com/davidgalvez/RecomendedProducsPlugin
 Description: Select products to show in a related products section wich can be set anywhere inside your website.
 Version: 1.0.0
 Author: David Galvez
